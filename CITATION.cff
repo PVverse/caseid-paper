@@ -1,0 +1,60 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+type: software
+title: "caseid-paper: Case Identification Framework for Pharmacovigilance"
+version: 0.0.1
+license: MIT
+repository-code: "https://github.com/fusaroli/caseid-paper"
+authors:
+  - family-names: Fusaroli
+    given-names: Michele
+    email: michele.fusaroli@who-umc.org
+    affiliation: Uppsala Monitoring Centre
+  - family-names: Felix
+    given-names: Julia
+    affiliation: Uppsala Monitoring Centre
+  - family-names: Sartori
+    given-names: Daniele
+    affiliation: Uppsala Monitoring Centre
+  - family-names: Giunchi
+    given-names: Valentina
+  - family-names: Härmark
+    given-names: Linda
+    affiliation: Drug Safety Research Unit
+  - family-names: Scholl
+    given-names: Jan
+    affiliation: LAREB
+  - family-names: van Hunsel
+    given-names: Florence
+    affiliation: LAREB
+  - family-names: Norén
+    given-names: G. Niklas
+    affiliation: Uppsala Monitoring Centre
+  - family-names: Ellenius
+    given-names: Johan
+    affiliation: Uppsala Monitoring Centre
+preferred-citation:
+  type: article
+  title: "Towards a Framework for Case Identification in Pharmacovigilance: Not All Reports are Created Equal"
+  authors:
+    - family-names: Fusaroli
+      given-names: Michele
+    - family-names: Felix
+      given-names: Julia
+    - family-names: Sartori
+      given-names: Daniele
+    - family-names: Giunchi
+      given-names: Valentina
+    - family-names: Härmark
+      given-names: Linda
+    - family-names: Scholl
+      given-names: Jan
+    - family-names: van Hunsel
+      given-names: Florence
+    - family-names: Norén
+      given-names: G. Niklas
+    - family-names: Ellenius
+      given-names: Johan
+  journal: "Drug Safety"
+  year: 2025
+  notes: "In press — update with volume, pages, and DOI when available"

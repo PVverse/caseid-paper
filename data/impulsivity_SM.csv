@@ -1,0 +1,472 @@
+drug;pt;relevance;rel_category;role;role_specification;reversibility_p;statement_p;exclusion;dose_relation;temporality_p;change;invariance;reversibility_n;statement_n;innocent_bystander;underlying_disease
+DAA;Gambling disorder;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;TRUE;FALSE;FALSE
+DAA;"Impulse-control disorder; Hypersexuality; Punding; Overwork";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;TRUE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE
+DAA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+DAA;Gambling;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+SSRI;Gambling disorder;Relevant;Precautionary;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE
+DAA;Libido increased;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Gambling;Relevant;Unclear;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE
+DAA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Acetylsalicylic acid;"Hypersexuality; Impulsivity";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Hypersexuality;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Hypersexuality;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE
+DAA;"Impulse-control disorder; Hyperphagia; Gambling disorder";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE;FALSE;TRUE
+DAA;"Libido increased; Gambling disorder; Hypersexuality";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE
+Methylphenidate;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;FALSE;TRUE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE
+TGA;Impulsive behaviour;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE
+TGA;Impulsive behaviour;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE
+Methylphenidate;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;"Shoplifting; Compulsive sexual behaviour; Impulse-control disorder";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;"Hypersexuality; Risk-taking behaviors";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Impulsive behaviour;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE
+DAA;Gambling disorder;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Ramipril;Hyperphagia;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE
+DAA;Gambling disorder;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Hypersexuality;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Compulsive shopping;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Libido increased;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Libido increased;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Hypersexuality;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Compulsive shopping; Hypersexuality; Food craving";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Compulsive shopping";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Libido increased;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Precautionary;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE
+DAA;"Gambling; Sexual activity increased";Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE
+SSRI;Impulsive behaviour;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Gambling disorder;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Gambling disorder;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Gambling disorder;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Libido increased";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Gambling disorder;Irrelevant;Relationship;Inefficacy;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Gambling disorder;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE
+SSRI;Gambling disorder;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Acetylsalicylic acid;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Sexually inappropriate behaviour;Relevant;Precautionary;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE
+Methylphenidate;Impulsivity;Irrelevant;Relationship;Inefficacy;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Acetylsalicylic acid;Hyperphagia;Relevant;Precautionary;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE
+SSRI;Binge eating;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE
+SSRI;Increased appetite;Irrelevant;Relationship;Discontinuation;Withdrawal;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Ramipril;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Libido increased;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE
+SSRI;Increased appetite;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Precautionary;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE
+Haloperidol;Hyperphagia;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE
+DAA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Hypersexuality;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;"Hypersexuality; Hyperphagia";Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Libido increased; Gambling";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Impulsive behaviour;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Precautionary;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Relationship;Inefficacy;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Hypersexuality; Gambling disorder";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Impulse-control disorder";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Unclear;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE
+DAA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Hypersexuality; Shoplifting";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Libido increased; tabacco addiction;Compulsive shopping";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Hypersexuality;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Relationship;Discontinuation;Withdrawal;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;"Gambling disorder;Impulsivity";Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;TRUE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Gaming disorder";Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Hyperphagia; Gambling disorder";Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;"Impulsivity;Hypersexuality";Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE;TRUE;FALSE
+DAA;Hypersexuality;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Hypersexuality; Computer use disorder; Gaming disorder";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Compulsive shopping;Relevant;Suspected;NA;NA;FALSE;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE
+DAA;Gambling disorder;Relevant;Precautionary;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;TRUE;TRUE;FALSE;FALSE;TRUE
+DAA;"Impulse-control disorder; Compulsive shopping; Hyperphagia";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Impulse-control disorder; Computer use disorder; Punding";Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Impulse-control disorder; Gaming disorder";Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Impulse-control disorder; Computer use disorder";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Impulse-control disorder;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;"Gambling disorder; Gambling";Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE
+DAA;"Impulse-control disorder; Gambling disorder; Excessive creativity; Computer use disorder";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Impulse-control disorder; Punding";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Compulsive shopping;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE
+DAA;"Compulsive shopping; Impulse-control disorder; Increased appetite; Hypersexuality; Punding; Computer use disorder";Irrelevant;Relationship;Timing;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Compulsive shopping; Impulse-control disorder; Punding";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;"Gambling disorder; Hypersexuality";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Hyperphagia";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+DAA;"Hypersexuality; Gambling disorder; Gaming disorder; Compulsive shopping";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Irrelevant;Relationship;Timing;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Compulsive shopping; Hyperphagia; Impulse-control disorder; Hypersexuality";Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+DAA;"Impulse-control disorder; Gambling disorder";Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Impulse-control disorder; Hobbyism; Gambling disorder; Hyperphagia";Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Acetylsalicylic acid;Hypersexuality;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hypersexuality;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling; Gambling disorder";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;"Hypersexuality; Impulsivity";Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Hypersexuality;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Impulse-control disorder; Punding; Hobbyism";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+SSRI;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Compulsive sexual behaviour; Gambling disorder; Hyperphagia";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;"Gambling disorder; Impulsive behaviour";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Irrelevant;Relationship;Discontinuation;Non-adherence;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hypersexuality;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE
+SSRI;"Gambling disorder; Impulsive behaviour";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Compulsive sexual behaviour; Impulsivity; Gambling disorder; Hyperphagia; Alcohol abuse";Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Sexually inappropriate behaviour;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Libido increased;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Compulsive shopping;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE
+Haloperidol;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Irrelevant;Relationship;Discontinuation;Non-adherence;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Impulsive behaviour;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Irrelevant;Relationship;Discontinuation;Withdrawal;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;TRUE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Gambling;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Compulsive shopping; Hyperphagia";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Acetylsalicylic acid;Impulsivity;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;"Binge eating; Increased appetite";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Precautionary;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE;FALSE;TRUE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Compulsive sexual behaviour; Impulse-control disorder";Relevant;Suspected;NA;NA;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Impulsive behaviour;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Binge eating;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE
+TGA;"Impulsive behaviour; Gambling disorder";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;TRUE
+DAA;"Impulse-control disorder; Gambling; Hypersexuality";Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Relationship;Inefficacy;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Compulsive shopping;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE
+Methylphenidate;"Impulsivity;BFRB";Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Impulse-control disorder; Compulsive shopping; Hypersexuality; Computer use disorder";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;"Compulsive shopping; Hypersexuality; Compulsive charity";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE
+Acetylsalicylic acid;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Relevant;Precautionary;NA;NA;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE
+DAA;Impulse-control disorder;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Libido increased; Gambling disorder";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;"Impulsivity;Gambling disorder;Hypersexuality";Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+DAA;"Libido increased; Hypersexuality; Gambling disorder; Urge to illegal acts";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Binge eating;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Libido increased;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Hypersexuality; Compulsive hoarding; Compulsive shopping";Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Compulsive sexual behaviour;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Compulsive shopping; Selling off household goods";Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Impulse-control disorder";Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Irrelevant;Relationship;Timing;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Impulse-control disorder; Compulsive shopping; Compulsive hoarding";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE
+Methylphenidate;"Impulsivity;Hyperphagia";Irrelevant;Relationship;Discontinuation;Non-adherence;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Gambling disorder;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Impulse-control disorder;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;"Hypersexuality; Gambling disorder; Hyperphagia";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;"Gambling disorder; Hypersexuality";Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+Acetylsalicylic acid;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE
+Paracetamol;Hyperphagia;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE
+Paracetamol;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE
+Paracetamol;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Acetylsalicylic acid;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;TRUE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Libido increased;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Hyperphagia;Irrelevant;Relationship;Inefficacy;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Impulse-control disorder;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Hypersexuality; Hyperphagia; Alcohol abuse; Polydipsia";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Impulse-control disorder;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;"Hyperphagia;Impulsivity";Irrelevant;Relationship;Inefficacy;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Impulse-control disorder;Relevant;Precautionary;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE
+Paracetamol;Impulsivity;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Relationship;Inefficacy;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE
+SSRI;Libido increased;Irrelevant;Relationship;Timing;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Hyperphagia; Hypersexuality";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE
+DAA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Hyperphagia; Gambling disorder";Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE
+DAA;"Libido increased; Hyperphagia; Gambling disorder; Impulse-control disorder";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Acetylsalicylic acid;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE
+Paracetamol;Hyperphagia;Irrelevant;Relationship;Bystander;NA;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE
+TGA;Gambling disorder;Irrelevant;Relationship;Timing;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Precautionary;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE
+DAA;Libido increased;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Acetylsalicylic acid;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE
+DAA;Gambling disorder;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Gambling disorder;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Impulse-control disorder; Hobbyism";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+TGA;Impulsive behaviour;Irrelevant;Relationship;Inefficacy;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE
+Acetylsalicylic acid;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE
+SSRI;Increased appetite;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE
+Paracetamol;Impulsivity;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE
+SSRI;Impulsive behaviour;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Erenumab;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Libido increased;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Hyperphagia;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE;TRUE;FALSE;FALSE
+Acetylsalicylic acid;Hyperphagia;Irrelevant;Relationship;Bystander;NA;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Impulse-control disorder;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Irrelevant;Relationship;Inefficacy;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Erenumab;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Impulse-control disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Irrelevant;Relationship;Timing;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;"Binge eating; Food craving";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Compulsive shopping";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+Erenumab;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Hypersexuality;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Impulsive behaviour;Irrelevant;Relationship;Inefficacy;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Impulsive behaviour;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE
+TGA;"Hypersexuality; Paraphilia; Compulsive sexual behaviour";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Libido increased;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;"Impulse-control disorder; Gambling disorder";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Erenumab;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Acetylsalicylic acid;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Impulsive behaviour;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Acetylsalicylic acid;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE
+TGA;Compulsive shopping;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Impulse-control disorder;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Erenumab;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Acetylsalicylic acid;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE
+SSRI;Sexually inappropriate behaviour;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE
+TGA;Gambling;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Libido increased;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Impulse-control disorder; Libido increased";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;"Impulsive behaviour; Hypersexuality";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Libido increased;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Acetylsalicylic acid;Hyperphagia;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE
+TGA;Gambling;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Acetylsalicylic acid;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Hypersexuality; Impulse-control disorder; excessive charity; stock market speculation; Hypersexuality";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Irrelevant;Relationship;Bystander;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE
+TGA;"Impulsive behaviour; Impulsive overdosing behavior";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE
+TGA;"Hypersexuality; Head banging";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Irrelevant;Relationship;Timing;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;"Hyperphagia;Gambling Disorder";Irrelevant;Relationship;Timing;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE
+TGA;"Hyperphagia; Hypersexuality; Impulse-control disorder";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;"Impulse-control disorder; Hyperphagia; Hypersexuality";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Gambling disorder; Impulse-control disorder";Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;"Libido increased; Compulsive shopping";Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;"Compulsive shopping; Hypersexuality";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Libido increased;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Impulse-control disorder;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Relationship;Discontinuation;Shortage;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Precautionary;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE
+Haloperidol;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Hypersexuality;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Erenumab;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hypersexuality;Irrelevant;Relationship;Timing;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;"Impulsive behaviour; Gambling disorder; Hypersexuality";Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE
+Haloperidol;Impulsivity;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Irrelevant;Medication;Miscoding;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Impulse-control disorder;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE
+SSRI;Binge eating;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Erenumab;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Abemaciclib;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;"Hypersexuality;Gambling disorder";Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;"Gambling disorder; Hypersexuality; Excessive masturbation";Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Compulsive shopping;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Abemaciclib;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;"Excessive masturbation; Compulsive shopping; Compulsive sexual behaviour; Gambling disorder";Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Compulsive shopping;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE
+SSRI;Libido increased;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Impulsive behaviour;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Suspected;NA;NA;TRUE;FALSE;TRUE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;"Compulsive sexual behaviour; Hypersexuality";Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;"Impulse-control disorder; Libido increased";Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Abemaciclib;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;TRUE;TRUE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Gambling disorder;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Hypersexuality;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TGA;Compulsive sexual behaviour;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Relationship;Discontinuation;Shortage;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Haloperidol;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE
+TGA;Hypersexuality;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Paracetamol;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE
+Abemaciclib;Hyperphagia;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Abemaciclib;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Acetylsalicylic acid;Impulsivity;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Abemaciclib;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Abemaciclib;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Impulsivity;Irrelevant;Event;Other impulsivity;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+DAA;Gambling disorder;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Methylphenidate;Hyperphagia;Relevant;Unclear;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Abemaciclib;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Abemaciclib;Hyperphagia;Relevant;Suspected;NA;NA;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Precautionary;NA;NA;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE
+SSRI;Increased appetite;Relevant;Suspected;NA;NA;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE

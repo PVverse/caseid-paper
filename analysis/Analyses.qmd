@@ -1,0 +1,841 @@
+---
+title: "Case-ID Annotation Study — Analysis"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    code-summary: "Show code"
+    embed-resources: true
+execute:
+  warning: false
+  message: false
+---
+
+## Overview
+
+This document reports the full analysis pipeline for the Case-ID annotation study, which evaluated the feasibility of systematically classifying individual case safety reports (ICSRs) for their relevance as evidence of a drug–adverse-event association. It should be read together with the preprint available at --PLACEHOLDER--.
+
+Two adverse-event domains were annotated:
+
+-   **Impulsivity-related events** — reports retrieved for dopamine agonists (DAA), third generation antipsychotics (TGA), methylphenidate, SSRIs, and other drugs.
+-   **Suicidality-related events** — reports retrieved via the MedDRA Standardised MedDRA Query (SMQ) for suicidal and self-injurious behaviour.
+
+Each report–drug pair was independently annotated by two raters (JF and MF) along two dimensions:
+
+1.  **Scope** — whether the report is in scope (i.e., the drug was suspected to be causally involved) or falls into one of several out-of-scope categories (medication miscoding, unrelated event, various types of indirect relationship).
+2.  **Relevance** — for in-scope cases, whether the evidence is *suspected*, *precautionary*, or *uninformative*, and which specific qualifiers characterizing the report were observed.
+
+Inter-rater agreement was assessed, disagreements were adjudicated, and the final solved annotations were used to characterise the distribution of report types and supporting/opposing causal evidence.
+
+::: {.callout-tip}
+## Reproducibility note
+
+Sections 2 and 3 require the original (non-public) annotation Excel files and cannot be run from the shared data alone. They are rendered with `eval: false` and serve as documentation. Sections 4–6 run fully from the two de-identified CSVs included in `Data/`.
+:::
+
+---
+
+## 0. Setup
+
+```{r}
+#| label: setup
+library(readxl)
+library(dplyr)
+library(stringr)
+library(janitor)
+library(tidyr)
+library(purrr)
+library(irr)
+library(writexl)
+library(data.table)
+library(ggplot2)
+library(ggpattern)
+library(ComplexUpset)
+library(patchwork)
+library(plotly)
+library(ggnewscale)
+library(scales)
+library(utf8)
+
+source(here::here("R", "functions.R"))
+```
+
+### Constants and paths
+
+The annotation scheme uses a fixed set of scope and relevance levels. All paths to external files are collected here so they can be adjusted in one place before running original-data sections.
+
+```{r}
+#| label: constants
+scope_levels <- c(
+  "in-scope",
+  "medication",
+  "event",
+  "relationship",
+  "relationship-inefficacy",
+  "relationship-innocent bystander",
+  "relationship-withdrawal",
+  "relationship-impossible timing",
+  "relationship-noncompliance",
+  "relationship-shortage"
+)
+
+relevance_levels <- c("precautionary", "uninformative", "suspected")
+
+key_cols <- c("report_id", "drug")
+
+# Path to the original annotation folder (not distributed)
+ANNOTATION_PATH <- here::here("25_12_10_annotations")
+
+# Path to ATC classification table — set to NULL to skip ATC-dependent plots
+# Set to your local path if you have ATC_DiAna.csv; all other sections run without it
+ATC_PATH <- NULL
+```
+
+---
+
+## 1. Framework {#sec-framework}
+
+The framework evaluates retrieved reports across four relevance domains to determine whether they belong to the case series of interest. Relevant reports are further characterised by reporter suspicion and evidentiary qualifiers.
+
+### Relevance domains
+
+| Relevance Domain | What it captures |
+|---|---|
+| **Exposure** | Misreported or miscoded drug exposure; falsified or substandard products; placebo-arm reports in blinded trials; drug-name confusion; non-relevant administration (route, strength, lot, posology, etc.) |
+| **Event** | Misreported event due to lack of expertise; miscoded event due to unclear coding recommendations or heterogeneous conventions; mistranslation; non-verified diagnostic criteria |
+| **Relationship** | Bystander (event explicitly attributed to a different drug); lack of effect or relapse during treatment; reverse causality (drug taken to treat the event); discontinuation (withdrawal, rebound, shortage, missed dose); impossible timing (event before exposure) |
+| **Setting / Population** | Miscoded demographic data; non-relevant care setting; use outside routine prescription (off-label, misuse, abuse, poisoning) |
+
+: Table 1. Relevance domains operationalised across both case studies. May require adaptation for other clinical questions. {#tbl-relevance-domains}
+
+### Reporter suspicion
+
+| Suspicion Label | What it captures |
+|---|---|
+| **Explicit suspicion** | The report explicitly or strongly frames the event as an adverse effect of the drug |
+| **Precautionary** | The report explicitly frames the event as plausibly not resulting from the drug |
+| **Unclear suspicion** | The report does not contain sufficient information to classify it as with explicit suspicion or precautionary |
+
+: Table 2. Reporter suspicion categories assigned to in-scope reports. {#tbl-suspicion}
+
+### Evidentiary qualifiers
+
+| Qualifier | Supports suspicion | Weakens suspicion |
+|---|---|---|
+| **Change in event pattern / severity** | New onset, escalation, or qualitative change | No meaningful change from baseline |
+| **Temporality** | Onset follows treatment initiation or dose change plausibly | Timing is inconsistent with exposure |
+| **Reversibility / dose relation** | Improves after withdrawal; recurs on rechallenge; worsens with dose increase; improves with dose reduction | Persists despite withdrawal; no relation to dose changes |
+| **Alternative explanations** | Other explanations explicitly ruled out | Another drug or the underlying disease better explains the event |
+| **Explicit causal statement** | Drug described as causing or likely causing the event | Drug described as unrelated or unlikely to have caused the event |
+
+: Table 3. Evidentiary qualifiers found in in-scope reports. {#tbl-qualifiers}
+
+---
+
+## 2. Inter-rater agreement {#sec-agreement}
+
+::: {.callout-warning}
+## Requires original data
+
+This section reads `Annotation_JF.xlsx` and `Annotation_MF.xlsx` from `ANNOTATION_PATH`. These files contain the original (potentially identifiable) annotation data and are not distributed. The chunk is set to `eval: false`.
+:::
+
+### Rationale
+
+Before consolidating annotations, we quantified how consistently the two raters applied the annotation scheme. We used three complementary metrics:
+
+-   **Percent agreement** — simple proportion of matching labels, interpretable but sensitive to marginal distributions.
+-   **Cohen's κ** — chance-corrected agreement; unweighted for scope (nominal), weighted (quadratic) for relevance (ordinal).
+-   **Krippendorff's α** — a more general reliability coefficient that handles ordinal data and missing labels.
+
+For binary-derived variables (in-scope vs. out-of-scope; suspected vs. not-suspected) we additionally report a **McNemar test** to detect systematic directional disagreement between raters.
+
+```{r}
+#| label: load-annotations
+#| eval: false
+jf_raw <- setDT(read_excel(file.path(ANNOTATION_PATH, "Annotation_JF.xlsx")) %>% clean_names())
+mf_raw <- setDT(read_excel(file.path(ANNOTATION_PATH, "Annotation_MF.xlsx")) %>% clean_names())
+# Post-adjudication versions (uncomment if needed):
+# jf_raw <- setDT(read_excel(file.path(ANNOTATION_PATH, "Annotation_JF post.xlsx")) %>% clean_names())
+# mf_raw <- setDT(read_excel(file.path(ANNOTATION_PATH, "Annotation_MF post.xlsx")) %>% clean_names())
+```
+
+```{r}
+#| label: merge-annotators
+#| eval: false
+df_ann <- full_join(
+  jf_raw[, .(scope_jf = out_of_scope, relevance_jf = annotator_assessment, report_id, drug)],
+  mf_raw[, .(scope_mf = out_of_scope, relevance_mf = annotator_assessment, report_id, drug)],
+  by = key_cols
+) %>%
+  mutate(
+    scope_jf     = factor(scope_jf,     levels = scope_levels),
+    scope_mf     = factor(scope_mf,     levels = scope_levels),
+    relevance_jf = factor(relevance_jf, levels = relevance_levels, ordered = TRUE),
+    relevance_mf = factor(relevance_mf, levels = relevance_levels, ordered = TRUE)
+  )
+
+# Sanity checks: each report–drug pair should appear exactly once per rater
+dups_jf <- jf_raw %>% count(across(all_of(key_cols))) %>% filter(n > 1)
+dups_mf <- mf_raw %>% count(across(all_of(key_cols))) %>% filter(n > 1)
+if (nrow(dups_jf) > 0) warning("JF has duplicate keys — inspect dups_jf.")
+if (nrow(dups_mf) > 0) warning("MF has duplicate keys — inspect dups_mf.")
+```
+
+```{r}
+#| label: agreement-metrics
+#| eval: false
+metrics_scope <- compute_metrics(df_ann, "scope_jf", "scope_mf", type = "nominal")
+metrics_rel   <- compute_metrics(df_ann, "relevance_jf", "relevance_mf", type = "ordinal")
+
+metrics_overall <- bind_rows(
+  metrics_scope %>% mutate(task = "scope"),
+  metrics_rel   %>% mutate(task = "relevance")
+) %>% select(task, everything())
+
+print(metrics_overall)
+```
+
+```{r}
+#| label: confusion-matrices
+#| eval: false
+scope_tabs <- confusion_tables(df_ann$scope_jf, df_ann$scope_mf)
+rel_tabs   <- confusion_tables(df_ann$relevance_jf, df_ann$relevance_mf)
+scope_tabs$counts
+rel_tabs$counts
+```
+
+```{r}
+#| label: mcnemar-tests
+#| eval: false
+# Binary variables derived from the ordinal ratings
+df_ann <- df_ann %>%
+  mutate(
+    in_scope_jf  = scope_jf     == "in-scope",
+    in_scope_mf  = scope_mf     == "in-scope",
+    suspected_jf = relevance_jf == "suspected",
+    suspected_mf = relevance_mf == "suspected"
+  )
+
+mcn_scope <- mcnemar_safe(df_ann$in_scope_jf,  df_ann$in_scope_mf)
+mcn_susp  <- mcnemar_safe(df_ann$suspected_jf, df_ann$suspected_mf)
+
+mcn_scope$table; mcn_scope$test
+mcn_susp$table;  mcn_susp$test
+
+metrics_overall <- setDT(metrics_overall)[
+  , mcnemar := c(mcn_scope$test$p.value, mcn_susp$test$p.value)
+]
+print(metrics_overall %>%
+        select(-kripp_alpha, -kappa_unweighted_p, -kappa_weighted_se, -kappa_weighted_p))
+```
+
+### Disagreement typology
+
+Beyond a global reliability estimate, we characterised *what kind* of disagreements occurred. For scope, we recorded which pair of labels each rater chose. For relevance, we distinguished adjacent disagreements (one step apart on the ordered scale: e.g., suspected vs. precautionary) from far disagreements (two steps apart: suspected vs. uninformative), which differ substantially in their interpretive consequences.
+
+Discordant cases were exported to Excel for consensus review by both raters.
+
+```{r}
+#| label: disagreement-typology
+#| eval: false
+df_ann <- df_ann %>%
+  mutate(
+    scope_agree     = scope_jf == scope_mf,
+    relevance_agree = relevance_jf == relevance_mf,
+    scope_disagreement_type = case_when(
+      scope_agree                        ~ "agreement",
+      is.na(scope_jf) | is.na(scope_mf) ~ "missing_label",
+      TRUE ~ paste0("JF_", scope_jf, "__vs__MF_", scope_mf)
+    ),
+    relevance_disagreement_type = case_when(
+      relevance_agree                                                       ~ "agreement",
+      is.na(relevance_jf) | is.na(relevance_mf)                            ~ "missing_label",
+      abs(as.integer(relevance_jf) - as.integer(relevance_mf)) == 1        ~ "adjacent_disagreement",
+      abs(as.integer(relevance_jf) - as.integer(relevance_mf)) >= 2        ~ "far_disagreement",
+      TRUE                                                                  ~ "other"
+    ),
+    relevance_pair = case_when(
+      relevance_agree ~ "agreement",
+      TRUE            ~ paste0("JF_", relevance_jf, "__vs__MF_", relevance_mf)
+    )
+  )
+
+scope_disagree_summary <- df_ann %>% count(scope_disagreement_type, sort = TRUE)
+rel_disagree_summary   <- df_ann %>% count(relevance_disagreement_type, relevance_pair, sort = TRUE)
+print(scope_disagree_summary)
+print(rel_disagree_summary)
+```
+
+```{r}
+#| label: export-discordant
+#| eval: false
+discordant <- df_ann %>%
+  filter(!scope_agree | !relevance_agree) %>%
+  select(any_of(key_cols),
+         scope_jf, scope_mf, scope_disagreement_type,
+         relevance_jf, relevance_mf, relevance_disagreement_type, relevance_pair)
+
+write_xlsx(
+  list(
+    overall_metrics                = metrics_overall,
+    scope_confusion_counts         = as.data.frame.matrix(scope_tabs$counts),
+    relevance_confusion_counts     = as.data.frame.matrix(rel_tabs$counts),
+    scope_disagreement_summary     = scope_disagree_summary,
+    relevance_disagreement_summary = rel_disagree_summary,
+    discordant_cases               = discordant
+  ),
+  path = "agreement_outputs.xlsx"
+)
+message("Done. Outputs written to: agreement_outputs.xlsx")
+```
+
+```{r}
+#| label: export-spotcheck
+#| eval: false
+# Export specific disagreement subsets for targeted review
+innocent_bystander_ids <- discordant[
+  scope_disagreement_type == "JF_in-scope__vs__MF_relationship-innocent bystander"
+]$report_id
+
+write_xlsx(
+  jf_raw[report_id %in% innocent_bystander_ids,
+         .(report_id, drug, assessment, text,
+           innocent_bystander, statement_2, annotator_assessment, notes)],
+  "Check1_innocent_bystander.xlsx"
+)
+write_xlsx(
+  df_ann[!scope_disagreement_type %in% c(
+    "JF_in-scope__vs__MF_relationship-innocent bystander", "agreement"
+  ), .(report_id, scope_disagreement_type)][
+    mf_raw[report_id %in% discordant[
+      !scope_disagreement_type %in% c(
+        "JF_in-scope__vs__MF_relationship-innocent bystander", "agreement"
+      )
+    ]$report_id,
+    .(report_id, drug, icd_pt, assessment, text, annotator_assessment, notes)],
+    on = "report_id"
+  ],
+  "Check2_different_scope.xlsx"
+)
+write_xlsx(
+  df_ann[, .(report_id, relevance_disagreement_type)][
+    mf_raw[report_id %in% discordant[
+      !relevance_disagreement_type %in% "missing_label"
+    ]$report_id],
+    on = "report_id"
+  ],
+  "Check3_different_relevance.xlsx"
+)
+```
+
+---
+
+## 3. Annotation characterisation {#sec-characterisation}
+
+::: {.callout-warning}
+## Requires original data
+
+This section reads `Annotation_solved.xlsx` (the adjudicated, consensus annotation file) and `vigiGrade_VB.csv` (report-level completeness scores from VigiGrade) from `ANNOTATION_PATH`. These files are not distributed.
+:::
+
+### Solved annotations
+
+After adjudication, each discordant case was assigned a consensus label. Here we load the full solved annotation file and compute the distribution of report types per drug.
+
+```{r}
+#| label: load-solved
+#| eval: false
+Annotation <- setDT(
+  read_excel(file.path(ANNOTATION_PATH, "Annotation_solved.xlsx")) %>% clean_names()
+)
+# Keep only fully resolved cases (drop any remaining disagreements)
+Annotation <- Annotation[is.na(disagreement)]
+
+Annotation <- copy(Annotation)[
+  , Category := ifelse(out_of_scope == "in-scope", annotator_assessment, out_of_scope)
+][
+  , drug := ifelse(drug == "methylphenidate", "Methylphenidate", drug)
+][
+  , Category := ifelse(grepl("relationship", Category), "relationship", Category)
+][
+  , Category := factor(Category,
+                       levels = rev(c("suspected", "uninformative", "precautionary",
+                                      "medication", "event", "relationship")),
+                       ordered = TRUE)
+][
+  , Group := fifelse(Category %in% c("suspected", "uninformative", "precautionary"),
+                     "in-Scope", "out-of-Scope")
+]
+
+# Distribution summaries
+print(Annotation[, .N, by = c("drug", "out_of_scope")][, perc := round(N * 100 / sum(N), 2), by = "drug"])
+print(Annotation[, .N, by = c("drug", "annotator_assessment")][, perc := round(N * 100 / sum(N), 2), by = "drug"])
+```
+
+### Report completeness
+
+Report completeness was quantified using VigiGrade scores (scale 0–1; scores are stored as integers in thousandths). We examined whether completeness differed across relevance categories, which would suggest that rater assessments were partly driven by information availability rather than true causal signal.
+
+```{r}
+#| label: completeness
+#| eval: false
+Completeness_VB <- setDT(read.csv(file.path(ANNOTATION_PATH, "vigiGrade_VB.csv")))
+Completeness_VB <- Completeness_VB[
+  ReportID %in% Annotation$report_id,
+  .(AverageCompleteness = as.numeric(AverageCompleteness) / 1000,
+    report_id = ReportID)
+]
+
+ggplot(Completeness_VB) +
+  geom_density(aes(x = AverageCompleteness)) +
+  theme_bw() +
+  labs(x = "VigiGrade completeness score", y = "Density")
+
+Annotation <- Completeness_VB[Annotation, on = "report_id"]
+
+# Overlay completeness distributions by relevance category
+ggplot(
+  Annotation[, .N, by = c("AverageCompleteness", "annotator_assessment")][
+    , perc := N / sum(N), by = "annotator_assessment"]
+) +
+  geom_area(aes(x = AverageCompleteness, y = perc, fill = annotator_assessment),
+            alpha = .3, position = "identity") +
+  theme_bw() +
+  labs(x = "VigiGrade completeness", y = "Proportion within category", fill = "Category")
+
+# Summary statistics by drug × relevance
+for (d in c("DAA", "TGA", "Methylphenidate", "SSRI")) {
+  for (r in c("suspected", "precautionary", "uninformative")) {
+    cat(d, r, ":\n")
+    print(summary(Annotation[drug == d & annotator_assessment == r]$AverageCompleteness))
+  }
+}
+```
+
+### Feature patterns by relevance category
+
+For in-scope reports we recorded which causal evidence elements were present (supportive) or absent/contradicted (against). This analysis reveals what distinguishes *suspected* from *precautionary* from *uninformative* reports in terms of documented causal evidence.
+
+```{r}
+#| label: feature-patterns
+#| eval: false
+for (relevance in c("suspected", "precautionary", "uninformative")) {
+  grp <- Annotation[annotator_assessment == relevance]
+  n   <- nrow(grp)
+
+  list_supportive <- c(
+    "Reversibility"  = round(mean(!is.na(grp$reversibility))  * 100),
+    "Statement"      = round(mean(!is.na(grp$statement))      * 100),
+    "Exclusion"      = round(mean(!is.na(grp$exclusion))      * 100),
+    "Dose-relation"  = round(mean(!is.na(grp$dose_relation))  * 100),
+    "Temporality"    = round(mean(!is.na(grp$temporality))    * 100),
+    "Change"         = round(mean(!is.na(grp$change))         * 100)
+  )
+  list_against <- c(
+    "Reversibility (neg)"  = round(mean(!is.na(grp$reversibility_2))    * 100),
+    "Statement (neg)"      = round(mean(!is.na(grp$statement_2))        * 100),
+    "Invariance"           = round(mean(!is.na(grp$invariance))         * 100),
+    "Innocent bystander"   = round(mean(!is.na(grp$innocent_bystander)) * 100),
+    "Underlying disease"   = round(mean(!is.na(grp$underlying_disease)) * 100)
+  )
+
+  cat("\nRelevance group:", relevance, "(n =", n, ")\n")
+  cat("\nSupportive features (%):\n"); print(sort(list_supportive, decreasing = TRUE))
+  cat("\nAgainst features (%):\n");    print(sort(list_against,    decreasing = TRUE))
+}
+```
+
+### Upset plots — evidence dimension co-occurrence
+
+Upset plots show how the causal evidence dimensions co-occur within each suspicion group. Each bar represents a combination of annotated dimensions; bars are ordered by frequency. This reveals whether positive (supportive) and negative (against) evidence tend to appear together or separately, and which combinations are most common. Results are shown for all three suspicion levels (suspected, precautionary, uninformative).
+
+```{r}
+#| label: upset-plots
+#| eval: false
+for (suspicion_level in c("suspected", "precautionary", "uninformative")) {
+  cat("\n### Suspicion level:", suspicion_level, "\n")
+
+  upset_data2 <- Annotation[annotator_assessment == suspicion_level][
+    , .(report_id         = paste0(report_id, drug),
+        reversibility_p   = !is.na(reversibility) | !is.na(dose_relation),
+        reversibility_n   = !is.na(reversibility_2),
+        causal_language_p = !is.na(statement),
+        causal_language_n = !is.na(statement_2),
+        exclusion_p       = !is.na(exclusion),
+        exclusion_n       = !is.na(innocent_bystander) | !is.na(underlying_disease),
+        temporality_p     = !is.na(temporality),
+        change_p          = !is.na(change),
+        change_n          = !is.na(invariance))
+  ]
+  upset_data3 <- upset_data2[
+    , .(report_id       = report_id,
+        reversibility   = reversibility_p   | reversibility_n,
+        causal_language = causal_language_n | causal_language_p,
+        exclusion       = exclusion_p       | exclusion_n,
+        temporality     = temporality_p,
+        change          = change_p          | change_n)
+  ]
+
+  # Positive and negative dimensions separately
+  print(upset(upset_data2, intersect = c("reversibility_p", "reversibility_n",
+                                          "causal_language_p", "causal_language_n",
+                                          "exclusion_p", "exclusion_n",
+                                          "temporality_p", "change_p", "change_n")))
+
+  # Collapsed (any evidence on each dimension, regardless of direction)
+  print(upset(upset_data3[upset_data2, on = "report_id"],
+              intersect = c("reversibility", "causal_language", "exclusion",
+                            "temporality", "change",
+                            "reversibility_p", "reversibility_n",
+                            "causal_language_p", "causal_language_n",
+                            "exclusion_p", "exclusion_n",
+                            "temporality_p", "change_p", "change_n")))
+}
+```
+
+### Export de-identified shared data
+
+The impulsivity annotation data are exported here (without free-text fields) as the shared CSV used in sections 4–6.
+
+```{r}
+#| label: export-shared-csv
+#| eval: false
+Impulsivity_formatted <- Annotation[
+  , relevance   := fifelse(out_of_scope == "in-scope", "Relevant", "Irrelevant")
+][
+  , rel_category := fcase(
+      relevance == "Relevant"   & TRUE,                              first_up(annotator_assessment),
+      relevance == "Irrelevant" & grepl("event",        out_of_scope), "Event",
+      relevance == "Irrelevant" & grepl("relationship",  out_of_scope), "Relationship",
+      relevance == "Irrelevant" & grepl("medication",    out_of_scope), "Medication",
+      default = NA_character_)
+][
+  , role := fcase(
+      grepl("event",        out_of_scope), "Other impulsivity",
+      grepl("relationship", out_of_scope), gsub("relationship-", "", out_of_scope),
+      grepl("medication",   out_of_scope), "Miscoding",
+      default = NA_character_)
+][
+  , .(id = report_id, drug, pt = icd_pt, relevance, rel_category, role,
+      role_specification = NA_character_,
+      reversibility_p = reversibility, statement_p = statement,
+      exclusion, dose_relation, temporality_p = temporality,
+      change, invariance, reversibility_n = reversibility_2,
+      statement_n = statement_2, innocent_bystander, underlying_disease)
+]
+
+Impulsivity_formatted[
+  , role := ifelse(!is.na(role), first_up(role), NA)
+][
+  , role_specification := ifelse(role %in% c("Withdrawal", "Noncompliance", "Shortage"),
+                                 role, role_specification)
+][
+  , role := ifelse(role %in% c("Withdrawal", "Noncompliance", "Shortage"), "Discontinuation", role)
+][
+  , role := ifelse(role == "Innocent bystander", "Bystander", role)
+][
+  , role := ifelse(role == "Impossible timing",  "Timing",    role)
+][
+  , rel_category := ifelse(rel_category == "Uninformative", "Unclear", rel_category)
+][
+  , role_specification := ifelse(role_specification == "Noncompliance", "Non-adherence", role_specification)
+]
+
+write.csv2(
+  Impulsivity_formatted[
+    , .(drug, pt, relevance, rel_category, role, role_specification,
+        reversibility_p    = !is.na(reversibility_p),
+        statement_p        = !is.na(statement_p),
+        exclusion          = !is.na(exclusion),
+        dose_relation      = !is.na(dose_relation),
+        temporality_p      = !is.na(temporality_p),
+        change             = !is.na(change),
+        invariance         = !is.na(invariance),
+        reversibility_n    = !is.na(reversibility_n),
+        statement_n        = !is.na(statement_n),
+        innocent_bystander = !is.na(innocent_bystander),
+        underlying_disease = !is.na(underlying_disease))
+  ],
+  here::here("data", "impulsivity_SM.csv")
+)
+```
+
+---
+
+## 4. Load shared data {#sec-load}
+
+The two de-identified CSVs are loaded here using helper functions from `R/functions.R`. `load_suicidality_data()` re-applies the role-transformation pipeline so that the resulting table has the same structure as the original `suicide_smq_formatted` object.
+
+```{r}
+#| label: load-shared
+Impulsivity_formatted <- load_impulsivity_data()
+suicide_smq_formatted <- load_suicidality_data()
+```
+
+---
+
+## 5. Case Study 1 — Impulsivity {#sec-case1}
+
+### 5.1 Relevance distribution {#sec-category-overview}
+
+The stacked bar chart below shows the proportion of report types for each drug or drug group. In-scope categories (suspected, precautionary, uninformative) appear in solid fill; out-of-scope categories (medication miscoding, unrelated event, various relationship types) are distinguished by a crosshatch pattern.
+
+Drug groups reflect prior pharmacological expectation:
+
+-   **Positive** controls (DAA, TGA) — drugs with established, strong associations with impulse-control disorders.
+-   **Ambiguous** (methylphenidate, SSRI) — drugs with mixed or contested evidence.
+-   **Negative** — drugs used as comparators with no prior signal for these outcomes.
+
+```{r}
+#| label: category-bar
+#| fig-width: 10
+#| fig-height: 5
+aes_cats <- category_aesthetics()
+
+plot_data <- copy(Impulsivity_formatted)[
+  , .N, by = .(Category = rel_category, drug, Group = fifelse(
+    rel_category %in% c("Suspected", "Uninformative", "Precautionary"),
+    "in-Scope", "out-of-Scope"
+  ))
+]
+plot_data[, Category := factor(tolower(Category),
+  levels = rev(c("suspected", "uninformative", "precautionary",
+                 "medication", "event", "relationship")),
+  ordered = TRUE
+)]
+plot_data[, drug := ifelse(drug == "DAA", "Dopamine agonists", drug)]
+plot_data[, drug_group := fcase(
+  drug %in% c("Dopamine agonists", "TGA"), "Positive",
+  drug %in% c("Methylphenidate", "SSRI"),  "Ambiguous",
+  default = "Negative"
+)][, drug_group := factor(drug_group, levels = c("Positive", "Ambiguous", "Negative"), ordered = TRUE)]
+
+plot_category_bars(plot_data, aes_cats)
+```
+
+### 5.2 Sankey diagram {#sec-sankey-impulsivity}
+
+The Sankey diagram traces each report through a five-stage decision tree:
+
+1.  **Retrieved** — all reports retrieved by the search query.
+2.  **Relevance** — Relevant / Irrelevant / Not assessable.
+3.  **Sub-category** — for relevant reports: Suspected / Precautionary / Unclear; for irrelevant: Event / Relationship / Exposure.
+4.  **Role** — specific role within the sub-category (e.g., Other impulsivity, Bystander, Miscoding).
+5.  **Role specification** — further subdivision where applicable (e.g., Non-adherence, Withdrawal for discontinuations).
+
+The diagram is interactive: hover over a node or link for counts.
+
+```{r}
+#| label: sankey-impulsivity
+pal <- sankey_palette()
+plot_sankey(Impulsivity_formatted, pal)
+```
+
+::: {.callout-note collapse="true"}
+## Supplementary: Pie charts and waffle chart
+
+Pie charts offer the same category breakdown per drug group.
+
+```{r}
+#| label: category-pies
+#| fig-width: 9
+#| fig-height: 3
+p_pos <- plot_category_pie(plot_data, "Positive",  aes_cats)
+p_amb <- plot_category_pie(plot_data, "Ambiguous", aes_cats, show_legend = TRUE)
+p_neg <- plot_category_pie(plot_data, "Negative",  aes_cats)
+p_pos | p_amb | p_neg
+```
+
+The waffle chart encodes the same information as individual squares, making absolute counts visible alongside proportions.
+
+```{r}
+#| label: category-waffle
+#| fig-width: 12
+#| fig-height: 6
+plot_category_waffle(plot_data, W = 10, fill_colors = aes_cats$fill_colors)
+```
+:::
+
+---
+
+## 6. Case Study 2 — Suicidality {#sec-case2}
+
+### 6.1 Sankey diagram {#sec-sankey-suicidality}
+
+The Sankey diagram traces retrieved suicidality reports through the same five-stage decision tree as in Case Study 1. Non-assessable reports appear as a distinct stream at the relevance stage.
+
+```{r}
+#| label: sankey-suicidality
+plot_sankey(suicide_smq_formatted, pal)
+```
+
+::: {.callout-note}
+## Subset Sankeys
+
+To plot a subset (e.g., a single drug), pass a filtered data frame:
+
+```r
+plot_sankey(suicide_smq_formatted[drug == "gabapentin"], pal)
+plot_sankey(Impulsivity_formatted[drug %in% c("DAA", "TGA")], pal)
+```
+:::
+
+### 6.2 Drug heatmap {#sec-heatmap-drug}
+
+```{r}
+#| label: load-atc
+# Load ATC classification for drug ordering (optional)
+if (!is.null(ATC_PATH) && file.exists(ATC_PATH)) {
+  ATC <- setDT(read.csv2(ATC_PATH))[code == primary_code]
+} else {
+  ATC <- NULL
+  message("ATC file not found — drug heatmap ordered by frequency; ATC class chart skipped.")
+}
+```
+
+Each column is a drug; each row is a report type. The width of each column reflects the total number of reports involving that drug. Drugs with fewer than three reports are excluded. Colour encodes the within-drug proportion of reports in each category, grouped into three clinically meaningful clusters: non-relevant mechanisms (red), non-assessable (grey), and potential adverse drug reactions (green).
+
+```{r}
+#| label: heatmap-drug
+#| fig-width: 14
+#| fig-height: 5
+dt_drug <- copy(suicide_smq_formatted)[!is.na(drug)]
+dt_drug[, category := fcase(
+  relevance == "Not assessable",                                 "Non-assessable",
+  rel_category %in% c("Precautionary", "Unclear", "Suspected"), rel_category,
+  default = role
+)]
+
+df_drug <- build_heatmap_data(
+  dt         = dt_drug,
+  entity_col = "drug",
+  min_n      = 2,
+  cat_levels = c("Overdose", "Discontinuation", "Inefficacy",
+                 "Non-assessable",
+                 "Precautionary", "Unclear", "Suspected")
+)
+setnames(df_drug, "entity", "drug")
+
+df_drug <- df_drug %>%
+  mutate(group = case_when(
+    category %in% c("Overdose", "Discontinuation", "Inefficacy") ~ "Non-relevant",
+    category == "Non-assessable"                                  ~ "Non-assessable",
+    TRUE                                                          ~ "Potential ADR"
+  ))
+
+# Order by ATC if available, else by frequency
+if (!is.null(ATC)) {
+  drugs_in_ATC     <- ATC[Substance %in% df_drug$drug]$Substance
+  drugs_not_in_ATC <- setdiff(df_drug$drug, drugs_in_ATC)
+  drug_order       <- c(drugs_in_ATC, drugs_not_in_ATC)
+} else {
+  drug_order <- levels(df_drug$drug)
+}
+df_drug$drug <- factor(df_drug$drug, levels = drug_order)
+
+plot_heatmap_detail(
+  df      = df_drug %>% rename(entity = drug),
+  x_label = "Drug (ordered by N drug occurrences)",
+  sep_ymin = 3.5, sep_ymax = 4.5
+)
+```
+
+### 6.3 Drug × ATC-class bar chart {#sec-atc-chart}
+
+This chart requires the ATC classification file and shows the distribution of report roles within each ATC first-level class, aggregating over individual drugs. It helps identify whether certain pharmacological classes show systematically different patterns.
+
+```{r}
+#| label: bar-atc-class
+#| fig-width: 10
+#| fig-height: 5
+if (!is.null(ATC)) {
+  suicide_atc <- ATC[, .(drug = Substance, Class4, Class3, Class2, Class1)][
+    setDT(suicide_smq_formatted), on = "drug"
+  ]
+
+  # By individual drug (min 5 reports)
+  drugs_shown <- suicide_atc[, .N, by = "drug"][N > 4]$drug
+  ggplot(suicide_atc[drug %in% drugs_shown], aes(x = drug, fill = role)) +
+    geom_bar(position = position_fill()) +
+    theme_bw() +
+    theme(axis.text.x = element_text(angle = 60, hjust = 1)) +
+    scale_fill_manual(values = pal) +
+    labs(x = "Drug", y = "Proportion", fill = "Role")
+
+  # By ATC Class 1
+  ggplot(suicide_atc[!is.na(Class1)], aes(x = Class1, fill = role)) +
+    geom_bar(position = position_fill()) +
+    theme_bw() +
+    theme(axis.text.x = element_text(angle = 60, hjust = 1)) +
+    scale_fill_manual(values = pal) +
+    labs(x = "ATC Class 1", y = "Proportion", fill = "Role")
+} else {
+  message("Skipped: ATC file not available.")
+}
+```
+
+### 6.4 Preferred-term heatmap {#sec-heatmap-pt}
+
+Each column is a MedDRA preferred term (PT); each row is a report type. Reports retrieved with multiple PTs are counted once per PT. PTs with fewer than three reports are excluded. The manual PT ordering follows a rough clinical severity gradient from completed acts (intentional overdose, completed suicide) through attempts, towards ideation.
+
+```{r}
+#| label: heatmap-pt
+#| fig-width: 12
+#| fig-height: 5
+dt_pt <- copy(suicide_smq_formatted) %>%
+  separate_longer_delim(pt, delim = ";") %>%
+  setDT()
+dt_pt[, pt := trimws(pt)]
+dt_pt[, category := fcase(
+  relevance == "Not assessable",                                 "Non-assessable",
+  rel_category %in% c("Precautionary", "Unclear", "Suspected"), rel_category,
+  default = role
+)]
+
+pt_order_manual <- c(
+  "intentional overdose", "poisoning deliberate", "completed suicide",
+  "suicide attempt", "suicidal behaviour", "intentional self-injury",
+  "self-injurious ideation", "suicidal ideation", "depression suicidal"
+)
+
+df_pt <- build_heatmap_data(
+  dt         = dt_pt,
+  entity_col = "pt",
+  min_n      = 2,
+  cat_levels = c("Bystander", "Batch problem", "Overdose", "Discontinuation", "Inefficacy",
+                 "Non-assessable",
+                 "Precautionary", "Unclear", "Suspected")
+)
+setnames(df_pt, "entity", "pt")
+
+df_pt <- df_pt %>%
+  mutate(group = case_when(
+    category %in% c("Overdose", "Discontinuation", "Inefficacy",
+                    "Bystander", "Batch problem") ~ "Non-relevant",
+    category == "Non-assessable"                  ~ "Non-assessable",
+    TRUE                                          ~ "Potential ADR"
+  ))
+
+shown_pts  <- levels(df_pt$pt)
+pt_ordered <- c(pt_order_manual[pt_order_manual %in% shown_pts],
+                setdiff(shown_pts, pt_order_manual))
+df_pt$pt   <- factor(df_pt$pt, levels = pt_ordered)
+
+plot_heatmap_detail(
+  df      = df_pt %>% rename(entity = pt),
+  x_label = "Preferred term (ordered by clinical sequence)",
+  sep_ymin = 5.5, sep_ymax = 6.5
+)
+```
+
+---
+
+## Session info
+
+```{r}
+#| label: session-info
+#| code-fold: false
+sessionInfo()
+```

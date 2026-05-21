@@ -1,0 +1,41 @@
+Package: caseid
+Title: Case Identification Framework for Pharmacovigilance
+Version: 0.0.1
+Authors@R: c(
+    person("Michele",  "Fusaroli",   email = "michele.fusaroli@who-umc.org", role = c("aut", "cre")),
+    person("Julia",    "Felix",      role = "aut"),
+    person("Daniele",  "Sartori",    role = "aut"),
+    person("Valentina","Giunchi",    role = "aut"),
+    person("Linda",    "Härmark",    role = "aut"),
+    person("Jan",      "Scholl",     role = "aut"),
+    person("Florence", "van Hunsel", role = "aut"),
+    person("G. Niklas","Norén",      role = "aut"),
+    person("Johan",    "Ellenius",   role = "aut")
+  )
+Description: Analysis code and de-identified data for the Case-ID annotation
+    study, which developed and evaluated a framework for systematic identification
+    of clinically meaningful case series in pharmacovigilance. Two case studies
+    are included: drug-induced impulsivity and drug-induced suicidality.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    ComplexUpset,
+    data.table,
+    dplyr,
+    ggpattern,
+    ggplot2,
+    ggnewscale,
+    here,
+    irr,
+    janitor,
+    patchwork,
+    plotly,
+    purrr,
+    readxl,
+    scales,
+    stringr,
+    tidyr,
+    utf8,
+    writexl

@@ -1,0 +1,246 @@
+report_id;drug;pt;role;Reversibility+;Statement+;Exclusion;Dose-relation;Temporality+;Change;Reversibility-;Statement-;Invariance;Innocent bystander;Underlying disease;Annotator assessment
+119;gabapentin;suicidal behaviour;suicidal intentions and acts as reactions;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+35;amlodipine;intentional overdose;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+34;amlodipine;intentional overdose;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+109;alprazolam;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+109;flurazepam;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+87;semaglutide;suicidal ideation;suicidal intentions and acts as reactions;FALSE;FALSE;FALSE;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+86;tirzepatide;suicidal ideation;suicidal intentions and acts as reactions;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+126;alprazolam;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+127;carbamazepine;intentional self-injury;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+50;zolpidem;completed suicide;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+50;diazepam;completed suicide;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+147;celecoxib;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+147;amitriptyline;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+100;paracetamol;"intentional overdose;suicide attempt";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+100;cefalexin;"intentional overdose;suicide attempt";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+115;efavirenz;depression suicidal;suicidal intentions and acts as reactions;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+73;venlafaxine;suicidal ideation;suicidal intentions and acts as result of inefficacy;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+88;morphine;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+121;estradiol;suicidal ideation;suicidal intentions and acts as result of inefficacy;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+14;potassium chloride;intentional overdose;intentional poisoning of other;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+124;valproic acid;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+124;quetiapine;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+15;fluvoxamine;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+151;"lamivudine;zidovudine";suicidal behaviour;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+151;dolutegravir;suicidal behaviour;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+150;carbamazepine;suicidal behaviour;suicidal intentions and acts as reactions;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;Suspected
+108;"amoxicillin;clavulanate";intentional overdose;overdose unclear intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+108;diclofenac;intentional overdose;overdose unclear intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+69;dulaglutide;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+69;insulin;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+116;alprazolam;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+13;potassium chloride;intentional overdose;intentional poisoning of other;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+117;ketotifen;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+90;ibuprofen;intentional overdose;overdose unclear intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+47;vortioxetine;completed suicide;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+67;macrogol;intentional overdose;overdose medication error;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+48;"estradiol;nomegestrol";self-injurious ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+101;metformin;suicide attempt;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+101;melatonin;suicide attempt;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+101;mefenamic acid;suicide attempt;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+101;amlodipine;suicide attempt;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+39;methylphenidate;suicidal ideation;suicidal intentions and acts as reactions;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+58;carbamazepine;intentional overdose;overdose unclear intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+61;paracetamol;intentional overdose;overdose unclear intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+62;paracetamol;poisoning deliberate;overdose unclear intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+56;"Codeine phosphate;Paracetamol";poisoning deliberate;overdose unclear intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+49;nebivolol;poisoning deliberate;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+49;metamizole sodium;poisoning deliberate;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+49;cetirizine hydrochloride;poisoning deliberate;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+49;pregabalin;poisoning deliberate;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+49;naproxen;poisoning deliberate;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+49;Trimethylphloroglucinol;poisoning deliberate;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+114;cycloserine;suicidal ideation;suicidal intentions and acts as reactions;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Uninformative
+82;sertraline;completed suicide;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+113;cycloserine;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+68;zopiclone;intentional overdose;overdose unclear intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+68;prazepam;intentional overdose;overdose unclear intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+92;ibuprofen;intentional overdose;overdose unclear intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+112;clarithromycin;suicide attempt;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+85;varenicline;suicidal ideation;suicidal intentions and acts as reactions;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;Suspected
+95;isotretinoin;suicidal behaviour;suicidal intentions and acts as reactions;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+107;brotizolam;intentional self-injury;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+107;nebivolol;intentional self-injury;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+84;finasteride;suicidal ideation;suicidal intentions and acts as reactions;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;Suspected
+83;prochlorpherazine;suicide attempt;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+70;venlafaxine;suicidal ideation;suicidal intentions and acts as reactions;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+46;duloxetine;suicidal ideation;relationship-noncompliance;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+41;clozapine;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+8;olanzapine;"intentional overdose;suicide attempt";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+8;quetiapine;"intentional overdose;suicide attempt";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+8;olanzapine;"intentional overdose;suicide attempt";suicidal intentions and acts as result of inefficacy;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+8;quetiapine;"intentional overdose;suicide attempt";suicidal intentions and acts as result of inefficacy;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+8;lorazepam;"intentional overdose;suicide attempt";suicidal intentions and acts as result of inefficacy;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+8;melatonin;"intentional overdose;suicide attempt";suicidal intentions and acts as result of inefficacy;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+8;zuclopenthixol decanoate;"intentional overdose;suicide attempt";suicidal intentions and acts as result of inefficacy;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+6;diazepam;Self-injurious ideation;suicidal intentions and acts as result of inefficacy;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+60;paracetamol;intentional overdose;overdose misuse;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+63;tramadol;poisoning deliberate;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+64;amitriptyline;intentional overdose;overdose unclear intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+123;alprazolam;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+123;"Cyanocobalamin;Pyridoxine ;Thiamine";suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+123;"dextromethorphan hydrobromide;paracetamol;pseudoephedrine";suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+123;Carbamazepine;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+123;Colecalciferol;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+12;Periciazine;intentional self-injury;suicidal intentions and acts as reactions;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+43;"diosmin;hesperidin";suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+43;pentoxifylline;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+111;protionamide;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+44;ketoprofen;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+74;Lisdexamfetamine;suicidal ideation;medication – batch problem;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+45;Duloxetine;suicidal ideation;suicidal intentions and acts as reactions;TRUE;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+42;Amitriptyline;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+91;alprazolam;intentional overdose;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+72;Liothyronine;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+105;triazolam;poisoning deliberate;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+105;alprazolam;poisoning deliberate;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+104;delorazepam;intentional self-injury;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+104;trazodone;intentional self-injury;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+106;quetiapine;suicide attempt;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+125;hydroxychloroquine;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+125;duloxetine;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+125;lamotrigine;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+125;methylphenidate;suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+1;escitalopram;suicidal ideation;suicidal intentions and acts as reactions;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+149;Sertraline;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+4;isotretinoin;completed suicide;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+5;isotretinoin;completed suicide;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+3;"Docusate sodium;Sennoside a+b";intentional overdose;overdose misuse;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+7;semaglutide;suicidal ideation;suicidal intentions and acts as reactions;FALSE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+89;Isotretinoin;completed suicide;suicidal intentions and acts as reactions;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;Precautionary
+52;diazepam;intentional overdose;overdose abuse;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+52;cannabis sativa;intentional overdose;overdose abuse;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+53;cannabis sativa;suicidal ideation;suicidal intentions and acts as reactions;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Uninformative
+2;natalizumab;depression suicidal;bystander;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+55;zopiclone;poisoning deliberate;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+54;bromazepam;poisoning deliberate;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+59;paracetamol;intentional overdose;overdose unclear intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+51;cannabis sativa;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+51;dianomorphine;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+51;cocaine;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+57;"Sulfamethoxazole;Trimethoprim";suicidal ideation;suicidal intentions and acts as reactions;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+148;semaglutide;completed suicide;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+11;clonazepam;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+94;isotretinoin;suicidal behaviour;suicidal intentions and acts as reactions;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+143;Chlorprothixene;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+143;zopiclone;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+143;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+143;alprazolam;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+146;Propiomazine;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+146;"Calcium;Colecalciferol";"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+146;zolpidem;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+146;diazepam;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+146;folic acid;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+146;Cyanocobalamin;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+146;fluoxetine;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+146;amlodipine;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+146;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+146;lamotrigine;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+145;bupropion;"intentional overdose;intentional self-injury;suicidal ideation";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+144;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+138;sertraline;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+138;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+129;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+128;metoprolol;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+128;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+128;melatonin;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+128;magnesium;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+128;Calcium;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+142;escitalopram;"intentional overdose;intentional self-injury;suicide attempt";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+142;bupropion;"intentional overdose;intentional self-injury;suicide attempt";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+142;Propiomazine;"intentional overdose;intentional self-injury;suicide attempt";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+142;lamotrigine;"intentional overdose;intentional self-injury;suicide attempt";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+137;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+140;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+141;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+141;hydroxyzine;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+141;Sertraline;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+135;quetiapine;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+135;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+136;gabapentin;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+136;escitalopram;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+136;tramadol;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+136;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+136;promethazine;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+139;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+139;olanzapine;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+139;quetiapine;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+133;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+134;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+134;fluoxetine;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+132;candesartan;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+132;citalopram;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+132;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+131;quetiapine;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+131;promethazine;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+131;paracetamol;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+131;bupropion;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+131;Chlorprothixene;"intentional overdose;intentional self-injury";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+130;bupropion;"intentional overdose;completed suicide";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+130;levetiracetam;"intentional overdose;completed suicide";unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+38;amlodipine;"intentional overdose;suicide attempt";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+37;amlodipine;"intentional overdose;suicide attempt";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+103;lithium;suicide attempt;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+102;olanzapine;suicide attempt;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+81;"Herbal nos;Spirulina spp.;Withania somnifera root;Zingiber officinale rhizome";suicidal ideation;suicidal intentions and acts as reactions;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+118;quetiapine;suicidal ideation;suicidal intentions and acts as reactions;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+122;opipramol;suicide attempt;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+122;paracetamol;suicide attempt;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+65;metformin;poisoning deliberate;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+33;metformin;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+32;zolpidem;suicidal ideation;suicidal intentions and acts as reactions;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+120;Chlorprothixene;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+80;upadacitinib;suicidal ideation;suicidal intentions and acts as reactions;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Uninformative
+NA;NA;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+NA;NA;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+NA;NA;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+NA;NA;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+NA;NA;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+NA;NA;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+NA;NA;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+NA;NA;NA;NA;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+9;alprazolam;intentional overdose;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+40;"Phentermine;Topiramate";suicidal ideation;suicidal intentions and acts as reactions;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+75;buprenorphine;suicidal ideation;suicidal intentions and acts as reactions;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+17;isotretinoin;suicidal ideation;suicidal intentions and acts as reactions;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+79;guanfacine;suicidal behaviour;suicidal intentions and acts as reactions;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+10;Chlorpromazine;Suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+78;Daridorexant;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+93;Esketamine;Completed suicide;relationship-noncompliance;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+18;Paracetamol;Suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+16;Paracetamol;Suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+71;Paracetamol;Intentional overdose;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+77;Venlafaxine;suicidal ideation;suicidal intentions and acts as reactions;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+97;Letrozole;Intentional overdose;overdose medication error;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+76;Montelukast;suicidal ideation;suicidal intentions and acts as reactions;TRUE;FALSE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+96;Semaglutide;depression suicidal;suicidal intentions and acts as reactions;TRUE;TRUE;FALSE;FALSE;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE;FALSE;Suspected
+99;Paracetamol;Suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+98;"Chlorphenamine;Paracetamol";Suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+110;Cycloserine;suicidal ideation;unclear;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+36;Doxycycline;Completed suicide;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+66;Felodipine;intentional overdose;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+66;Metoprolol;intentional overdose;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+66;Valpromide;intentional overdose;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+66;Trihexyphenidyl;intentional overdose;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+66;"Metformin;Sitagliptin";intentional overdose;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+66;Loxapine;intentional overdose;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+22;alprazolam;intentional overdose;overdose unclear intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+27;paracetamol;"intentional self-injury; Suicide attempt";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+24;paracetamol;"intentional self-injury; Suicide attempt";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+25;paracetamol;"intentional self-injury; Suicide attempt";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+26;paracetamol;"intentional self-injury; Suicide attempt";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+30;sertraline;intentional overdose;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+29;clonazepam;intentional overdose;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+23;paracetamol;"intentional self-injury; Suicide attempt";overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+20;paracetamol;intentional overdose;overdose unclear intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+20;clonixin;intentional overdose;overdose unclear intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+19;paracetamol;Suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+19;clotiazepam;Suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+31;carbamazepine;intentional overdose;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+31;carbamazepine;intentional overdose;intentional poisoning of other;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+21;venlafaxine;Suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+21;clonazepam;Suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+21;lamotrigine;Suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+21;quetiapine;Suicide attempt;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA
+28;clonazepam;Intentional overdose;overdose suicidal intent;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE;NA

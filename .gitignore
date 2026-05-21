@@ -1,0 +1,21 @@
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+renv/library/
+
+# Rendered output (regenerate with: quarto render analysis/Analyses.qmd)
+*.html
+
+# Original (non-public) annotation data
+25_12_10_annotations/
+
+# ATC classification table (not distributed)
+ATC_DiAna.csv
+
+# Python venv used by Quarto toolchain
+.venv/
+
+# macOS
+.DS_Store
