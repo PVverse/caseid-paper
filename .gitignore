@@ -6,7 +6,10 @@
 renv/library/
 
 # Rendered output (regenerate with: quarto render analysis/Analyses.qmd)
+# NOTE: analysis/Analyses.html is allowed (auto-rendered by GitHub Actions)
 *.html
+!analysis/Analyses.html
+!index.html
 
 # Original (non-public) annotation data
 25_12_10_annotations/
