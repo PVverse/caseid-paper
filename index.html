@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case-ID Annotation Study — Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0969da;
+            --secondary-color: #6f42c1;
+            --accent-color: #fb8500;
+            --light-bg: #f6f8fa;
+            --border-color: #d0d7de;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #24292f;
+            background-color: #ffffff;
+        }
+
+        /* Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .page-header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .repo-info {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+        }
+
+        .repo-info a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .repo-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Navigation */
+        nav.toc {
+            background-color: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            position: sticky;
+            top: 20px;
+        }
+
+        nav.toc h5 {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        nav.toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav.toc li {
+            margin: 8px 0;
+        }
+
+        nav.toc a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: block;
+            padding: 5px 10px;
+            border-left: 3px solid transparent;
+            transition: all 0.2s;
+        }
+
+        nav.toc a:hover {
+            border-left-color: var(--accent-color);
+            background-color: rgba(9, 105, 218, 0.05);
+            padding-left: 15px;
+        }
+
+        nav.toc ul ul a {
+            padding-left: 30px;
+            font-size: 0.85rem;
+        }
+
+        /* Main content */
+        .main-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .content-section {
+            margin-bottom: 50px;
+        }
+
+        .section-divider {
+            border-top: 2px solid var(--border-color);
+            margin: 50px 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-bg);
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #424242;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Callouts */
+        .callout {
+            border-left: 4px solid;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            background-color: var(--light-bg);
+        }
+
+        .callout-tip {
+            border-left-color: #28a745;
+            background-color: rgba(40, 167, 69, 0.05);
+        }
+
+        .callout-warning {
+            border-left-color: #ffc107;
+            background-color: rgba(255, 193, 7, 0.05);
+        }
+
+        .callout-title {
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 5px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        table thead {
+            background-color: var(--light-bg);
+            font-weight: 600;
+        }
+
+        table th {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        table tbody tr:hover {
+            background-color: rgba(9, 105, 218, 0.02);
+        }
+
+        /* Code blocks */
+        pre {
+            background-color: #0d1117;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 16px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: 'Courier New', 'Monaco', monospace;
+            font-size: 0.85rem;
+        }
+
+        pre code {
+            color: #e6edf3;
+        }
+
+        /* Inline code */
+        p code, li code {
+            background-color: rgba(9, 105, 218, 0.1);
+            color: var(--primary-color);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        /* Links */
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 5px;
+        }
+
+        .badge-info {
+            background-color: rgba(9, 105, 218, 0.15);
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        .page-footer {
+            background-color: var(--light-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+            color: #666666;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .page-header .subtitle {
+                font-size: 0.95rem;
+            }
+
+            .main-content {
+                padding: 0 15px;
+            }
+
+            nav.toc {
+                position: static;
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .page-header, nav.toc, .page-footer {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>📊 Case-ID Annotation Study</h1>
+            <p class="subtitle">Full Analysis Pipeline for Individual Case Safety Report Classification</p>
+            <div class="repo-info">
+                <span>📦 Repository:</span>
+                <a href="https://github.com/PVverse/caseid-paper" target="_blank">PVverse/caseid-paper</a>
+                <span class="badge badge-info">MIT License</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <div class="row">
+            <div class="col-lg-3">
+                <!-- Table of Contents -->
+                <nav class="toc">
+                    <h5>📑 Contents</h5>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#setup">0. Setup</a></li>
+                        <li><a href="#framework">1. Framework</a></li>
+                        <li><a href="#agreement">2. Inter-rater agreement</a></li>
+                        <li><a href="#characterisation">3. Annotation characterisation</a></li>
+                        <li><a href="#load">4. Load shared data</a></li>
+                        <li><a href="#case1">5. Case Study 1 — Impulsivity</a></li>
+                        <li><a href="#case2">6. Case Study 2 — Suicidality</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-lg-9">
+                <!-- Overview -->
+                <section id="overview" class="content-section">
+                    <h2>📋 Overview</h2>
+                    <p>This document reports the full analysis pipeline for the <strong>Case-ID annotation study</strong>, which evaluated the feasibility of systematically classifying individual case safety reports (ICSRs) for their relevance as evidence of a drug–adverse-event association.</p>
+                    
+                    <p>The study examined two adverse-event domains:</p>
+                    <ul>
+                        <li><strong>Impulsivity-related events</strong> — reports retrieved for dopamine agonists (DAA), third generation antipsychotics (TGA), methylphenidate, SSRIs, and other drugs.</li>
+                        <li><strong>Suicidality-related events</strong> — reports retrieved via the MedDRA Standardised MedDRA Query (SMQ) for suicidal and self-injurious behaviour.</li>
+                    </ul>
+
+                    <h4>Annotation Dimensions</h4>
+                    <p>Each report–drug pair was independently annotated by two raters (JF and MF) along two dimensions:</p>
+                    <ol>
+                        <li><strong>Scope</strong> — whether the report is in-scope (drug suspected to be causally involved) or falls into out-of-scope categories.</li>
+                        <li><strong>Relevance</strong> — for in-scope cases, whether evidence is <em>suspected</em>, <em>precautionary</em>, or <em>uninformative</em>, and which qualifiers were observed.</li>
+                    </ol>
+
+                    <div class="callout callout-tip">
+                        <div class="callout-title">✓ Reproducibility</div>
+                        <p style="margin-bottom: 0;">Sections 2 and 3 require the original (non-public) annotation Excel files and are rendered with <code>eval: false</code> for documentation. Sections 4–6 use de-identified shared data and are fully reproducible.</p>
+                    </div>
+                </section>
+
+                <!-- Setup -->
+                <div class="section-divider"></div>
+                <section id="setup" class="content-section">
+                    <h2>⚙️ 0. Setup</h2>
+                    <p>The analysis uses the following R libraries and helper functions:</p>
+                    <pre><code class="language-r">library(readxl)
+library(dplyr)
+library(stringr)
+library(janitor)
+library(tidyr)
+library(purrr)
+library(irr)
+library(writexl)
+library(data.table)
+library(ggplot2)
+library(ggpattern)
+library(ComplexUpset)
+library(patchwork)
+library(plotly)
+library(ggnewscale)
+library(scales)
+library(utf8)
+
+source(here::here("R", "functions.R"))</code></pre>
+
+                    <h4>Constants and Paths</h4>
+                    <p>The annotation scheme uses a fixed set of scope and relevance levels:</p>
+                    <pre><code class="language-r">scope_levels <- c(
+  "in-scope",
+  "medication",
+  "event",
+  "relationship",
+  "relationship-inefficacy",
+  "relationship-innocent bystander",
+  "relationship-withdrawal",
+  "relationship-impossible timing",
+  "relationship-noncompliance",
+  "relationship-shortage"
+)
+
+relevance_levels <- c("precautionary", "uninformative", "suspected")</code></pre>
+                </section>
+
+                <!-- Framework -->
+                <div class="section-divider"></div>
+                <section id="framework" class="content-section">
+                    <h2>🔍 1. Framework</h2>
+                    <p>The framework evaluates retrieved reports across four relevance domains to determine whether they belong to the case series of interest.</p>
+
+                    <h4>Relevance Domains</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Relevance Domain</th>
+                                <th>What it captures</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Exposure</strong></td>
+                                <td>Misreported or miscoded drug exposure; falsified or substandard products; placebo-arm reports in blinded trials; drug-name confusion</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Event</strong></td>
+                                <td>Misreported event due to lack of expertise; miscoded event; mistranslation; non-verified diagnostic criteria</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Relationship</strong></td>
+                                <td>Bystander (event attributed to different drug); lack of effect or relapse during treatment; reverse causality; discontinuation effects</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Setting / Population</strong></td>
+                                <td>Miscoded demographic data; non-relevant care setting; use outside routine prescription (off-label, misuse, abuse, poisoning)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Reporter Suspicion Categories</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Suspicion Label</th>
+                                <th>What it captures</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Explicit suspicion</strong></td>
+                                <td>The report explicitly or strongly frames the event as an adverse effect</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Precautionary</strong></td>
+                                <td>The report explicitly frames the event as plausibly not resulting from the drug</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Unclear suspicion</strong></td>
+                                <td>The report does not contain sufficient information to classify it clearly</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Evidentiary Qualifiers</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Qualifier</th>
+                                <th>Supports Suspicion</th>
+                                <th>Weakens Suspicion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Change in pattern/severity</strong></td>
+                                <td>New onset, escalation, qualitative change</td>
+                                <td>No meaningful change from baseline</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Temporality</strong></td>
+                                <td>Onset follows treatment initiation or dose change plausibly</td>
+                                <td>Timing inconsistent with exposure</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reversibility / dose relation</strong></td>
+                                <td>Improves after withdrawal; recurs on rechallenge; dose-related</td>
+                                <td>Persists despite withdrawal; no dose relation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Alternative explanations</strong></td>
+                                <td>Other explanations explicitly ruled out</td>
+                                <td>Another drug or underlying disease better explains event</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Explicit causal statement</strong></td>
+                                <td>Drug described as causing or likely causing the event</td>
+                                <td>Drug described as unrelated</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Inter-rater agreement -->
+                <div class="section-divider"></div>
+                <section id="agreement" class="content-section">
+                    <h2>📊 2. Inter-rater Agreement</h2>
+                    <div class="callout callout-warning">
+                        <div class="callout-title">⚠️ Requires Original Data</div>
+                        <p style="margin-bottom: 0;">This section reads <code>Annotation_JF.xlsx</code> and <code>Annotation_MF.xlsx</code> from the annotation path. These files contain original (potentially identifiable) annotation data and are not distributed. The analysis uses three complementary metrics to quantify rater consistency.</p>
+                    </div>
+
+                    <h4>Agreement Metrics</h4>
+                    <ul>
+                        <li><strong>Percent agreement</strong> — simple proportion of matching labels; interpretable but sensitive to marginal distributions.</li>
+                        <li><strong>Cohen's κ (kappa)</strong> — chance-corrected agreement; unweighted for scope (nominal), weighted (quadratic) for relevance (ordinal).</li>
+                        <li><strong>Krippendorff's α (alpha)</strong> — general reliability coefficient handling ordinal data and missing labels.</li>
+                        <li><strong>McNemar test</strong> — for binary-derived variables, detects systematic directional disagreement between raters.</li>
+                    </ul>
+
+                    <h4>Disagreement Typology</h4>
+                    <p>Beyond global reliability, the analysis characterizes the types of disagreements that occurred:</p>
+                    <ul>
+                        <li><strong>For scope</strong>: Recorded which label pair each rater chose</li>
+                        <li><strong>For relevance</strong>: Distinguished adjacent disagreements (off by 1 level) from far disagreements (off by 2+ levels)</li>
+                        <li><strong>Adjudication</strong>: Discordant cases exported for consensus review by both raters</li>
+                    </ul>
+                </section>
+
+                <!-- Annotation characterisation -->
+                <div class="section-divider"></div>
+                <section id="characterisation" class="content-section">
+                    <h2>📈 3. Annotation Characterisation</h2>
+                    <div class="callout callout-warning">
+                        <div class="callout-title">⚠️ Requires Original Data</div>
+                        <p style="margin-bottom: 0;">This section reads <code>Annotation_solved.xlsx</code> (adjudicated consensus annotations) and <code>vigiGrade_VB.csv</code> (VigiGrade completeness scores). These are not distributed, but the methodology is documented here.</p>
+                    </div>
+
+                    <h4>Solved Annotations</h4>
+                    <p>After adjudication, each discordant case receives a consensus label. The analysis computes:</p>
+                    <ul>
+                        <li>Distribution of report types per drug</li>
+                        <li>Proportion of in-scope vs. out-of-scope cases</li>
+                        <li>Relevance category breakdown (suspected, precautionary, uninformative)</li>
+                    </ul>
+
+                    <h4>Report Completeness</h4>
+                    <p>VigiGrade scores (scale 0–1) are examined to assess whether completeness differs across relevance categories, which would suggest potential bias in annotation patterns.</p>
+
+                    <h4>Feature Patterns</h4>
+                    <p>For in-scope reports, the presence/absence of causal evidence elements is analyzed to characterize what distinguishes:</p>
+                    <ul>
+                        <li><strong>Suspected</strong> reports (clear supportive evidence)</li>
+                        <li><strong>Precautionary</strong> reports (evidence present but weakened by contraindications)</li>
+                        <li><strong>Uninformative</strong> reports (insufficient or equivocal evidence)</li>
+                    </ul>
+                </section>
+
+                <!-- Load shared data -->
+                <div class="section-divider"></div>
+                <section id="load" class="content-section">
+                    <h2>📥 4. Load Shared Data</h2>
+                    <p>The de-identified CSVs are loaded using helper functions from <code>R/functions.R</code>. These functions re-apply the role-transformation pipeline to ensure consistent formatting:</p>
+                    <pre><code class="language-r">Impulsivity_formatted <- load_impulsivity_data()
+suicide_smq_formatted <- load_suicidality_data()</code></pre>
+                    <p>These datasets are fully reproducible from the shared data alone and do not require original annotation files.</p>
+                </section>
+
+                <!-- Case Study 1 -->
+                <div class="section-divider"></div>
+                <section id="case1" class="content-section">
+                    <h2>💊 5. Case Study 1 — Impulsivity</h2>
+
+                    <h4>5.1 Relevance Distribution</h4>
+                    <p>The analysis shows the proportion of report types for each drug or drug group:</p>
+
+                    <h5>Drug Groups</h5>
+                    <ul>
+                        <li><strong>Positive controls</strong> (DAA, TGA) — drugs with established, strong associations with impulse-control disorders</li>
+                        <li><strong>Ambiguous</strong> (methylphenidate, SSRI) — drugs with mixed or contested evidence</li>
+                        <li><strong>Negative</strong> — drugs used as comparators with no prior signal for these outcomes</li>
+                    </ul>
+
+                    <h4>5.2 Sankey Diagram</h4>
+                    <p>The Sankey diagram traces each report through a five-stage decision tree:</p>
+                    <ol>
+                        <li><strong>Retrieved</strong> — all reports from the search query</li>
+                        <li><strong>Relevance</strong> — Relevant / Irrelevant / Not assessable</li>
+                        <li><strong>Sub-category</strong> — for relevant: Suspected / Precautionary / Unclear; for irrelevant: Event / Relationship / Exposure</li>
+                        <li><strong>Role</strong> — specific role within sub-category (e.g., Bystander, Miscoding)</li>
+                        <li><strong>Role specification</strong> — further subdivision where applicable (e.g., Non-adherence, Withdrawal)</li>
+                    </ol>
+
+                    <div class="callout callout-tip">
+                        <div class="callout-title">💡 Supplementary Visualizations</div>
+                        <p style="margin-bottom: 0;">The full analysis includes pie charts per drug group and waffle charts encoding absolute counts alongside proportions—see the original Quarto document for these interactive visualizations.</p>
+                    </div>
+                </section>
+
+                <!-- Case Study 2 -->
+                <div class="section-divider"></div>
+                <section id="case2" class="content-section">
+                    <h2>🔗 6. Case Study 2 — Suicidality</h2>
+
+                    <h4>6.1 Sankey Diagram</h4>
+                    <p>Suicidality reports are traced through the same five-stage decision tree as in Case Study 1. Non-assessable reports appear as a distinct stream at the relevance stage.</p>
+
+                    <h4>6.2 Drug Heatmap</h4>
+                    <p>Each column represents a drug; each row represents a report type. Column width reflects total report count per drug (drugs with &lt;3 reports excluded). Color encodes report type frequency.</p>
+
+                    <h4>6.3 Drug × ATC Class Analysis</h4>
+                    <p>Distribution of report roles within each ATC first-level class, aggregating over individual drugs. Helps identify whether certain pharmacological classes show systematic patterns in evidence quality.</p>
+
+                    <h4>6.4 Preferred Term Heatmap</h4>
+                    <p>Each column represents a MedDRA preferred term (PT); each row represents a report type. Reports with multiple PTs are counted once per PT. The manual PT order reflects clinical sequence from active suicidal behavior through ideation and depressive symptoms.</p>
+                </section>
+
+                <!-- Resources -->
+                <div class="section-divider"></div>
+                <section id="resources" class="content-section">
+                    <h2>📚 Additional Resources</h2>
+                    <ul>
+                        <li><strong>GitHub Repository:</strong> <a href="https://github.com/PVverse/caseid-paper" target="_blank">PVverse/caseid-paper</a></li>
+                        <li><strong>Source Document:</strong> <code>analysis/Analyses.qmd</code> (Quarto R Markdown)</li>
+                        <li><strong>License:</strong> MIT License</li>
+                        <li><strong>Language:</strong> R with ggplot2, data.table, ComplexUpset, and other visualization libraries</li>
+                    </ul>
+
+                    <div class="callout callout-tip">
+                        <div class="callout-title">🔧 Running the Analysis Locally</div>
+                        <p>To render the full Quarto document with all interactive visualizations:</p>
+                        <pre><code class="language-bash">quarto render analysis/Analyses.qmd</code></pre>
+                        <p style="margin-bottom: 0;">This generates an HTML report with all plots, tables, and code.</p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-content">
+            <p><strong>Case-ID Annotation Study — Analysis Pipeline</strong></p>
+            <p>This webpage documents the full analysis of individual case safety report (ICSR) classification for drug-adverse event associations.</p>
+            <div class="footer-links">
+                <a href="https://github.com/PVverse/caseid-paper" target="_blank">GitHub Repository</a>
+                <a href="https://github.com/PVverse/caseid-paper/blob/main/analysis/Analyses.qmd" target="_blank">Source Document</a>
+                <a href="https://github.com/PVverse" target="_blank">Organization</a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.85rem;">
+                Generated for GitHub Pages | MIT License | Last updated: May 2026
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/r.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+    <script>
+        // Highlight code blocks
+        document.querySelectorAll('pre code').forEach(el => {
+            hljs.highlightElement(el);
+        });
+
+        // Smooth scrolling for TOC links
+        document.querySelectorAll('nav.toc a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Active TOC highlighting
+        window.addEventListener('scroll', () => {
+            let current = '';
+            document.querySelectorAll('.content-section').forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('nav.toc a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                    link.style.borderLeftColor = 'var(--accent-color)';
+                    link.style.backgroundColor = 'rgba(9, 105, 218, 0.05)';
+                } else {
+                    link.style.borderLeftColor = 'transparent';
+                    link.style.backgroundColor = 'transparent';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
