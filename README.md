@@ -72,7 +72,7 @@ Sections 6.2–6.3 (drug heatmap ordering by ATC class and the ATC bar chart) re
 
 ## Data availability
 
-The de-identified data in `data/` are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The original annotation files (which contain report-level information subject to VigiBase Data Access Conditions) are not distributed. Access to the original data is available from the authors on reasonable request, subject to those Conditions (IR 00122698).
+The de-identified annotations in `data/` are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The original annotation files (which contain report-level information subject to VigiBase Data Access Conditions) are not distributed. Access to the original data is available from Uppsala Monitoring Centre, subject to Data Access Conditions.
 
 ## Citation
 
