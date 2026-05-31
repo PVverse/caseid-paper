@@ -21,10 +21,8 @@ Two adverse-event domains were annotated:
 -   **Impulsivity-related events** — reports retrieved for dopamine agonists (DAA), third generation antipsychotics (TGA), methylphenidate, SSRIs, and other drugs.
 -   **Suicidality-related events** — reports retrieved via the MedDRA Standardised MedDRA Query (SMQ) for suicidal and self-injurious behaviour.
 
-Each report–drug pair was independently annotated by two raters (JF and MF) along two dimensions:
-
-1.  **Scope** — whether the report is in scope (i.e., the drug was suspected to be causally involved) or falls into one of several out-of-scope categories (medication miscoding, unrelated event, various types of indirect relationship).
-2.  **Relevance** — for in-scope cases, whether the evidence is *suspected*, *precautionary*, or *uninformative*, and which specific qualifiers characterizing the report were observed.
+Each report–drug pair was independently annotated by two raters (JF and MF) according to the proposed framework.
+The proposed framework structures relevance assessment on a-priori case definitions and clinical questions across exposure, event, drug-event relationship, and context, and distinguishes **relevance** (whether a report should be included or not in a cases series) from **reports qualifiers** (what the specific contribution of the individual report within the case series is). Both dimensions are question-specific and should be adapted accordingly.
 
 Inter-rater agreement was assessed, disagreements were adjudicated, and the final solved annotations were used to characterise the distribution of report types and supporting/opposing causal evidence.
 
@@ -68,7 +66,7 @@ The annotation scheme uses a fixed set of scope and relevance levels. All paths 
 ```{r}
 #| label: constants
 scope_levels <- c(
-  "in-scope",
+  "in-scope", ## relevant
   "medication",
   "event",
   "relationship",
@@ -80,7 +78,7 @@ scope_levels <- c(
   "relationship-shortage"
 )
 
-relevance_levels <- c("precautionary", "uninformative", "suspected")
+suspicion_levels <- c("precautionary", "uninformative", "suspected")
 
 key_cols <- c("report_id", "drug")
 
@@ -149,7 +147,7 @@ Before consolidating annotations, we quantified how consistently the two raters 
 -   **Cohen's κ** — chance-corrected agreement; unweighted for scope (nominal), weighted (quadratic) for relevance (ordinal).
 -   **Krippendorff's α** — a more general reliability coefficient that handles ordinal data and missing labels.
 
-For binary-derived variables (in-scope vs. out-of-scope; suspected vs. not-suspected) we additionally report a **McNemar test** to detect systematic directional disagreement between raters.
+For binary-derived variables (in-scope vs. out-of-scope; suspected vs. not-suspected) we additionally report a **McNemar test** to detect systematic directional disagreement between raters. Note that with scope in the script we refer to relevance.
 
 ```{r}
 #| label: load-annotations
@@ -165,15 +163,15 @@ mf_raw <- setDT(read_excel(file.path(ANNOTATION_PATH, "Annotation_MF.xlsx")) %>%
 #| label: merge-annotators
 #| eval: false
 df_ann <- full_join(
-  jf_raw[, .(scope_jf = out_of_scope, relevance_jf = annotator_assessment, report_id, drug)],
-  mf_raw[, .(scope_mf = out_of_scope, relevance_mf = annotator_assessment, report_id, drug)],
+  jf_raw[, .(scope_jf = out_of_scope, suspicion_jf = annotator_assessment, report_id, drug)],
+  mf_raw[, .(scope_mf = out_of_scope, suspicion_mf = annotator_assessment, report_id, drug)],
   by = key_cols
 ) %>%
   mutate(
     scope_jf     = factor(scope_jf,     levels = scope_levels),
     scope_mf     = factor(scope_mf,     levels = scope_levels),
-    relevance_jf = factor(relevance_jf, levels = relevance_levels, ordered = TRUE),
-    relevance_mf = factor(relevance_mf, levels = relevance_levels, ordered = TRUE)
+    suspicion_jf = factor(suspicion_jf, levels = suspicion_levels, ordered = TRUE),
+    suspicion_mf = factor(suspicion_mf, levels = suspicion_levels, ordered = TRUE)
   )
 
 # Sanity checks: each report–drug pair should appear exactly once per rater
@@ -187,7 +185,7 @@ if (nrow(dups_mf) > 0) warning("MF has duplicate keys — inspect dups_mf.")
 #| label: agreement-metrics
 #| eval: false
 metrics_scope <- compute_metrics(df_ann, "scope_jf", "scope_mf", type = "nominal")
-metrics_rel   <- compute_metrics(df_ann, "relevance_jf", "relevance_mf", type = "ordinal")
+metrics_rel   <- compute_metrics(df_ann, "suspicion_jf", "suspicion_mf", type = "ordinal")
 
 metrics_overall <- bind_rows(
   metrics_scope %>% mutate(task = "scope"),
@@ -201,9 +199,9 @@ print(metrics_overall)
 #| label: confusion-matrices
 #| eval: false
 scope_tabs <- confusion_tables(df_ann$scope_jf, df_ann$scope_mf)
-rel_tabs   <- confusion_tables(df_ann$relevance_jf, df_ann$relevance_mf)
+suspicion_tabs   <- confusion_tables(df_ann$suspicion_jf, df_ann$suspicion_mf)
 scope_tabs$counts
-rel_tabs$counts
+suspicion_tabs$counts
 ```
 
 ```{r}
@@ -214,8 +212,8 @@ df_ann <- df_ann %>%
   mutate(
     in_scope_jf  = scope_jf     == "in-scope",
     in_scope_mf  = scope_mf     == "in-scope",
-    suspected_jf = relevance_jf == "suspected",
-    suspected_mf = relevance_mf == "suspected"
+    suspected_jf = suspicion_jf == "suspected",
+    suspected_mf = suspicion_mf == "suspected"
   )
 
 mcn_scope <- mcnemar_safe(df_ann$in_scope_jf,  df_ann$in_scope_mf)
@@ -243,47 +241,47 @@ Discordant cases were exported to Excel for consensus review by both raters.
 df_ann <- df_ann %>%
   mutate(
     scope_agree     = scope_jf == scope_mf,
-    relevance_agree = relevance_jf == relevance_mf,
+    suspicion_agree = suspicion_jf == suspicion_mf,
     scope_disagreement_type = case_when(
       scope_agree                        ~ "agreement",
       is.na(scope_jf) | is.na(scope_mf) ~ "missing_label",
       TRUE ~ paste0("JF_", scope_jf, "__vs__MF_", scope_mf)
     ),
-    relevance_disagreement_type = case_when(
-      relevance_agree                                                       ~ "agreement",
-      is.na(relevance_jf) | is.na(relevance_mf)                            ~ "missing_label",
-      abs(as.integer(relevance_jf) - as.integer(relevance_mf)) == 1        ~ "adjacent_disagreement",
-      abs(as.integer(relevance_jf) - as.integer(relevance_mf)) >= 2        ~ "far_disagreement",
+    suspicion_disagreement_type = case_when(
+      suspicion_agree                                                       ~ "agreement",
+      is.na(suspicion_jf) | is.na(suspicion_mf)                            ~ "missing_label",
+      abs(as.integer(suspicion_jf) - as.integer(suspicion_mf)) == 1        ~ "adjacent_disagreement",
+      abs(as.integer(suspicion_jf) - as.integer(suspicion_mf)) >= 2        ~ "far_disagreement",
       TRUE                                                                  ~ "other"
     ),
-    relevance_pair = case_when(
-      relevance_agree ~ "agreement",
-      TRUE            ~ paste0("JF_", relevance_jf, "__vs__MF_", relevance_mf)
+    suspicion_pair = case_when(
+      suspicion_agree ~ "agreement",
+      TRUE            ~ paste0("JF_", suspicion_jf, "__vs__MF_", suspicion_mf)
     )
   )
 
 scope_disagree_summary <- df_ann %>% count(scope_disagreement_type, sort = TRUE)
-rel_disagree_summary   <- df_ann %>% count(relevance_disagreement_type, relevance_pair, sort = TRUE)
+suspicion_disagree_summary   <- df_ann %>% count(suspicion_disagreement_type, suspicion_pair, sort = TRUE)
 print(scope_disagree_summary)
-print(rel_disagree_summary)
+print(suspicion_disagree_summary)
 ```
 
 ```{r}
 #| label: export-discordant
 #| eval: false
 discordant <- df_ann %>%
-  filter(!scope_agree | !relevance_agree) %>%
+  filter(!scope_agree | !suspicion_agree) %>%
   select(any_of(key_cols),
          scope_jf, scope_mf, scope_disagreement_type,
-         relevance_jf, relevance_mf, relevance_disagreement_type, relevance_pair)
+         suspicion_jf, suspicion_mf, suspicion_disagreement_type, suspicion_pair)
 
 write_xlsx(
   list(
     overall_metrics                = metrics_overall,
     scope_confusion_counts         = as.data.frame.matrix(scope_tabs$counts),
-    relevance_confusion_counts     = as.data.frame.matrix(rel_tabs$counts),
+    suspicion_confusion_counts     = as.data.frame.matrix(suspicion_tabs$counts),
     scope_disagreement_summary     = scope_disagree_summary,
-    relevance_disagreement_summary = rel_disagree_summary,
+    suspicion_disagreement_summary = suspicion_disagree_summary,
     discordant_cases               = discordant
   ),
   path = "agreement_outputs.xlsx"
@@ -320,9 +318,9 @@ write_xlsx(
   "Check2_different_scope.xlsx"
 )
 write_xlsx(
-  df_ann[, .(report_id, relevance_disagreement_type)][
+  df_ann[, .(report_id, suspicion_disagreement_type)][
     mf_raw[report_id %in% discordant[
-      !relevance_disagreement_type %in% "missing_label"
+      !suspicion_disagreement_type %in% "missing_label"
     ]$report_id],
     on = "report_id"
   ],
